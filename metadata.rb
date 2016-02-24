@@ -26,7 +26,7 @@ end
 attribute 'mongodb/config/dbpath',
           :display_name => 'dbpath',
           :description => 'Path to store the mongodb data',
-          :default => '/var/lib/mongodb'
+          :default => '/data'
 
 attribute 'mongodb/config/logpath',
           :display_name => 'logpath',
