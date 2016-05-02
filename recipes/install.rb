@@ -56,9 +56,11 @@ template init_file do
   )
   action :create_if_missing
 
-  if(platform_family?('rhel') && node['platform_version'].to_i >= 7)
-    notifies :run, 'execute[mongodb-systemctl-daemon-reload]', :immediately
-  end
+#  if(platform_family?('rhel') && node['platform_version'].to_i >= 7)
+#    notifies :run, 'execute[mongodb-systemctl-daemon-reload]', :immediately
+#  end
+#remark command 'systemctl', 2016/5/2
+
 end
 
 case node['platform_family']
