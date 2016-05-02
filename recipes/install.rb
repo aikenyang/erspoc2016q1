@@ -34,10 +34,11 @@ else
 end
 
 # Reload systemctl for RHEL 7+ after modifying the init file.
-execute 'mongodb-systemctl-daemon-reload' do
-  command 'systemctl daemon-reload'
-  action :nothing
-end
+#execute 'mongodb-systemctl-daemon-reload' do
+#  command 'systemctl daemon-reload'
+#  action :nothing
+#end
+#remark, 2016/5/2 for CentOS & AmazonLinux
 
 template init_file do
   cookbook node['mongodb']['template_cookbook']
