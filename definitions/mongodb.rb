@@ -171,10 +171,11 @@ define :mongodb_instance,
   end
 
   # Reload systemctl for RHEL 7+ after modifying the init file.
-  execute 'mongodb-systemctl-daemon-reload' do
-    command 'systemctl daemon-reload'
-    action :nothing
-  end
+  #execute 'mongodb-systemctl-daemon-reload' do
+  #  command 'systemctl daemon-reload'
+  #  action :nothing
+  #end
+  #remark command systemctl for Amazon Linux, 2016/5/3
 
   # init script
   template new_resource.init_file do
